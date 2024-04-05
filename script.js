@@ -1,4 +1,9 @@
 import { config } from "dotenv";
 config()
 
-console.log(process.env.API_KEY)
+import { Configuration, OpenAIApi } from "openai"
+
+const openaia = new OpenAIApi(new Configuration({
+    apiKey: process.env.API_KEY
+}))
+
