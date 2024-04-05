@@ -1,15 +1,21 @@
 import { config } from "dotenv";
 config()
 
-import { Configuration, OpenAIApi } from "openai"
+import OpenAI from "openai"
 
-const openaia = new OpenAIApi(new Configuration({
-    apiKey: process.env.API_KEY
-}))
+const openai = new OpenAI({
+    organization: 'org-3hPrG1oP9eZVG8AiglAgeDP4',
+});
 
-openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
-    messages: [{role: "user", content: "Hello ChatGPT"}]
-}).then(res => {
-    console.log(res)
-})
+
+
+
+
+
+
+// openai.createChatCompletion({
+//     model: "gpt-3.5-turbo",
+//     messages: [{role: "user", content: "Hello ChatGPT"}]
+// }).then(res => {
+//     console.log(res)
+// })
