@@ -20,6 +20,6 @@
   "homepage": "https://github.com/dtaplin21/saas-practice#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "openai": "^4.32.2"
+    "openai": "^4.33.0"
   }
 }
