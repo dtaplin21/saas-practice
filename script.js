@@ -1,21 +1,33 @@
-const express = require("express")
 import { config } from "dotenv";
 import OpenAI from "openai"
 config()
-const openai = new OpenAI()
-    
-
-    new OpenAI({organization: 'org-3hPrG1oP9eZVG8AiglAgeDP4' })
 
 
+const openai = new OpenAI();
+
+
+  async function main() {
+    const completion = await openai.chat.completion.create({
+        messages: [{ role: "system", content: "You are a helpful assistant." }],
+        model: "gpt-3.5-turbo",
+    });
+
+    console.log(completion.choices[0]);
+  }  
+
+  main()
+
+   
 
 
 
 
 
-openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
-    messages: [{role: "user", content: "Hello ChatGPT"}]
-}).then(res => {
-    console.log(res)
-})
+
+
+// openai.createChatCompletion({
+//     model: "gpt-3.5-turbo",
+//     messages: [{role: "user", content: "Hello ChatGPT"}]
+// }).then(res => {
+//     console.log(res)
+// })
